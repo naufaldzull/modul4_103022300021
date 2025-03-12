@@ -13,3 +13,40 @@ else
 {
     Console.WriteLine($"Harga {inputProduk} : Tidak Ada!");
 }
+
+
+Console.WriteLine("\n");
+
+FanLaptop mode = new FanLaptop();
+
+while (true)
+{
+    Console.Write("Masukan Mode Fan (Quiet, Balance, Performance, Turbo / Keluar) : ");
+    string command = Console.ReadLine();
+
+    if (command == "Quiet")
+    {
+        mode.modeQuiet();
+    }
+    else if (command == "Balanced")
+    {
+        mode.modeBalance();
+    }
+    else if (command == "Performance")
+    {
+        mode.modePerformance();
+    }
+    else if (command == "Turbo")
+    {
+        mode.modeTurbo();
+    }
+    else if (command == "Keluar")
+    {
+        break;
+    }
+    else
+    {
+        Console.WriteLine("Pilih lagi");
+    }
+
+}
